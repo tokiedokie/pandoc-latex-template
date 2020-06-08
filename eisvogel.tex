@@ -233,7 +233,7 @@ $else$
   \IfFileExists{parskip.sty}{%
     \usepackage{parskip}
   }{% else
-    \setlength{\parindent}{1pt}
+    \setlength{\parindent}{0pt}
     \setlength{\parskip}{6pt plus 2pt minus 1pt}}
 }{% if KOMA class
   \KOMAoptions{parskip=half}}
@@ -460,7 +460,7 @@ $if(csl-refs)$
 \newlength{\cslhangindent}
 \setlength{\cslhangindent}{1.5em}
 \newenvironment{cslreferences}%
-  {$if(csl-hanging-indent)$\setlength{\parindent}{1pt}%
+  {$if(csl-hanging-indent)$\setlength{\parindent}{0pt}%
   \everypar{\setlength{\hangindent}{\cslhangindent}}\ignorespaces$endif$}%
   {\par}
 $endif$
@@ -682,8 +682,9 @@ $endif$
 %
 % remove paragraph indention
 %
-\setlength{\parindent}{1pt}
-\setlength{\parskip}{6pt plus 2pt minus 1pt}
+\setlength{\parindent}{1em}
+\setlength{\parskip}{0px}
+\usepackage{indentfirst}
 \setlength{\emergencystretch}{3em}  % prevent overfull lines
 \usepackage{indentfirst}
 
